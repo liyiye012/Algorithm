@@ -62,7 +62,7 @@ int main() {
     int T = 0;
     cin >> T;
     for (int i = 0; i < T; i++) {
-        solve();
+        solve(); 
     }
     return 0;
 }

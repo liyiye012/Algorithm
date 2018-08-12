@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Algorithm_module.cpp" />
     <ClCompile Include="Solution.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

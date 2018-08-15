@@ -36,7 +36,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="08_MinNumberInRotatedArray(CodingInterview).cpp">
+    <ClCompile Include="09_Fibonacci(CodingInterview).cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

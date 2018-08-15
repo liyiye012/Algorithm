@@ -19,7 +19,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Solution.cpp" />
+    <ClCompile Include="06_ConstructBinaryTree.cpp" />
+    <ClCompile Include="Array.cpp" />
+    <ClCompile Include="BinaryTree.cpp" />
+    <ClCompile Include="List.cpp" />
+    <ClCompile Include="StringUtil.cpp" />
+    <ClCompile Include="Tree.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Array.h" />
+    <ClInclude Include="BinaryTree.h" />
+    <ClInclude Include="List.h" />
+    <ClInclude Include="StringUtil.h" />
+    <ClInclude Include="Tree.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{000CDE04-ADB5-4BBA-912E-A4EB7370F685}</ProjectGuid>
@@ -90,7 +102,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>

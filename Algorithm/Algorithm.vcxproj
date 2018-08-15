@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="07_QueueWithTwoStacks.cpp" />
+    <ClCompile Include="08_MinNumberInRotatedArray(CodingInterview).cpp" />
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />

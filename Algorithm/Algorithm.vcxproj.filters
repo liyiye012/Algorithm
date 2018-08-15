@@ -30,14 +30,14 @@
     <ClCompile Include="Tree.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="07_QueueWithTwoStacks.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
     <ClCompile Include="Queue.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="08_MinNumberInRotatedArray(CodingInterview).cpp">
+      <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="10_NumberOf1InBinary.cpp" />
+    <ClCompile Include="11_Power(CodingInterview).cpp" />
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />

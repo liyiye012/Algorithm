@@ -36,8 +36,11 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="题目2教科书般的亵渎.cpp">
-      <Filter>Resource Files</Filter>
+    <ClCompile Include="题目2教科书般的亵渎[Offer收割]编程练习赛73-hihoCoder.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="题目1地铁站[Offer收割]编程练习赛73-hihoCoder.cpp">
+      <Filter>Resource Files\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

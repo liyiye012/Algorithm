@@ -26,7 +26,8 @@
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="StringUtil.cpp" />
     <ClCompile Include="Tree.cpp" />
-    <ClCompile Include="题目2教科书般的亵渎.cpp" />
+    <ClCompile Include="题目1地铁站[Offer收割]编程练习赛73-hihoCoder.cpp" />
+    <ClCompile Include="题目2教科书般的亵渎[Offer收割]编程练习赛73-hihoCoder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />

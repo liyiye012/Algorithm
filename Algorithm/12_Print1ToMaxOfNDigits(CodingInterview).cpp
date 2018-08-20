@@ -23,6 +23,7 @@ void PrintNumber(char* number);
 bool Increment(char* number);
 void Print1ToMaxOfNDigitsRecursively(char* number, int length, int index);
 
+
 // ====================·½·¨Ò»====================
 void Print1ToMaxOfNDigits_1(int n)
 {

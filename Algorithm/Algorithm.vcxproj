@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="64.StreamMedian(CodingInterview).cpp" />
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />
-    <ClCompile Include="PrintCodeSelf.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="StringUtil.cpp" />

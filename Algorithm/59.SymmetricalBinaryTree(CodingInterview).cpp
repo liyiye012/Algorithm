@@ -16,24 +16,66 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 // 题目：请实现一个函数，用来判断一棵二叉树是不是对称的。如果一棵二叉树和
 // 它的镜像一样，那么它是对称的。
 #include<iostream>
-
+#include<stack>
 #include <cstdio>
 #include "BinaryTree.h"
 using namespace std;
-
-bool isSymmetrical(BinaryTreeNode* pRoot1, BinaryTreeNode* pRoot2);
-
+//Recursive
+//bool isSymmetrical(BinaryTreeNode* pRoot1, BinaryTreeNode* pRoot2);
+//
+//bool isSymmetrical(BinaryTreeNode* pRoot)
+//{
+//    return isSymmetrical(pRoot, pRoot);
+//}
+//
+//bool isSymmetrical(BinaryTreeNode* pRoot1, BinaryTreeNode* pRoot2)
+//{
+//    if (pRoot1 == NULL && pRoot2 == NULL) return true;
+//    else if (pRoot1 == NULL || pRoot2 == NULL) return false;
+//    else if (pRoot1->m_nValue != pRoot2->m_nValue) return false;
+//    return isSymmetrical(pRoot1->m_pLeft, pRoot2->m_pRight) && isSymmetrical(pRoot2->m_pRight, pRoot1->m_pLeft);
+//}
+//Non-Recursive(use stack)
 bool isSymmetrical(BinaryTreeNode* pRoot)
 {
-    return isSymmetrical(pRoot, pRoot);
-}
+    if (pRoot == NULL) return true;
+    stack<BinaryTreeNode*> sta;
+    BinaryTreeNode *left, *right;
+    if (pRoot->m_pLeft != NULL) {
+        if (pRoot->m_pRight == NULL) return false;
+        sta.push(pRoot->m_pLeft);
+        sta.push(pRoot->m_pRight);
+    }
+    else if (pRoot->m_pRight != NULL) {
+        return false;
+    }
 
-bool isSymmetrical(BinaryTreeNode* pRoot1, BinaryTreeNode* pRoot2)
-{
-    if (pRoot1 == NULL && pRoot2 == NULL) return true;
-    else if (pRoot1 == NULL || pRoot2 == NULL) return false;
-    else if (pRoot1->m_nValue != pRoot2->m_nValue) return false;
-    return isSymmetrical(pRoot1->m_pLeft, pRoot2->m_pRight) && isSymmetrical(pRoot2->m_pRight, pRoot1->m_pLeft);
+    while (!sta.empty())
+    {
+        if (sta.size() % 2 != 0) return false;
+        right = sta.top(); sta.pop();
+        left = sta.top(); sta.pop();
+        if (right->m_nValue != left->m_nValue) return false;
+
+        if (left->m_pLeft != NULL) {
+            if (right->m_pRight == NULL) return false;
+            sta.push(left->m_pLeft);
+            sta.push(left->m_pRight);
+        }
+        else if (right->m_pRight != NULL) {
+            return false;
+        }
+
+        if (left->m_pRight != NULL) {
+            if (right->m_pLeft == NULL) return false;
+            sta.push(left->m_pRight);
+            sta.push(right->m_pLeft);
+        }
+        else if (right->m_pLeft != NULL) {
+            return false;
+        }
+    }
+    return true;
 }
 
 // ====================测试代码====================

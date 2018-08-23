@@ -35,7 +35,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="64.StreamMedian(CodingInterview).cpp">
+    <ClCompile Include="59.SymmetricalBinaryTree(CodingInterview).cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

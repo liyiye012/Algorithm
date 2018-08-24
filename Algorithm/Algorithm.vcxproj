@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="59.SymmetricalBinaryTree(CodingInterview).cpp" />
+    <ClCompile Include="20.PrintMatrix.cpp" />
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />

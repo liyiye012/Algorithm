@@ -17,6 +17,8 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 // 它的镜像一样，那么它是对称的。
 #include<iostream>
 #include<stack>
+#include<queue>
+#include<deque>
 #include <cstdio>
 #include "BinaryTree.h"
 using namespace std;
@@ -35,45 +37,24 @@ using namespace std;
 //    else if (pRoot1->m_nValue != pRoot2->m_nValue) return false;
 //    return isSymmetrical(pRoot1->m_pLeft, pRoot2->m_pRight) && isSymmetrical(pRoot2->m_pRight, pRoot1->m_pLeft);
 //}
-//Non-Recursive(use stack)
+//Non-Recursive(use queue)
 bool isSymmetrical(BinaryTreeNode* pRoot)
 {
     if (pRoot == NULL) return true;
-    stack<BinaryTreeNode*> sta;
-    BinaryTreeNode *left, *right;
-    if (pRoot->m_pLeft != NULL) {
-        if (pRoot->m_pRight == NULL) return false;
-        sta.push(pRoot->m_pLeft);
-        sta.push(pRoot->m_pRight);
-    }
-    else if (pRoot->m_pRight != NULL) {
-        return false;
-    }
-
-    while (!sta.empty())
+    queue<BinaryTreeNode*> queue;
+    queue.push(pRoot->m_pLeft);
+    queue.push(pRoot->m_pRight);
+    while (!queue.empty())
     {
-        if (sta.size() % 2 != 0) return false;
-        right = sta.top(); sta.pop();
-        left = sta.top(); sta.pop();
-        if (right->m_nValue != left->m_nValue) return false;
-
-        if (left->m_pLeft != NULL) {
-            if (right->m_pRight == NULL) return false;
-            sta.push(left->m_pLeft);
-            sta.push(left->m_pRight);
-        }
-        else if (right->m_pRight != NULL) {
-            return false;
-        }
-
-        if (left->m_pRight != NULL) {
-            if (right->m_pLeft == NULL) return false;
-            sta.push(left->m_pRight);
-            sta.push(right->m_pLeft);
-        }
-        else if (right->m_pLeft != NULL) {
-            return false;
-        }
+        BinaryTreeNode *left = queue.front(); queue.pop();
+        BinaryTreeNode *right = queue.front(); queue.pop();
+        if (!left && !right) continue;
+        else if (!left || !right) return false;
+        else if (left->m_nValue != right->m_nValue) return false;
+        queue.push(left->m_pLeft);
+        queue.push(right->m_pRight);
+        queue.push(left->m_pRight);
+        queue.push(right->m_pLeft);
     }
     return true;
 }

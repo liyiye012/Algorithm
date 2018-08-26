@@ -7,6 +7,7 @@
 #include<algorithm>
 #include<stack>
 #include<set>
+#include<bitset>
 using namespace std;
 void output(vector<int> Arr) {
     for (int i = 0; i < Arr.size(); i++) {

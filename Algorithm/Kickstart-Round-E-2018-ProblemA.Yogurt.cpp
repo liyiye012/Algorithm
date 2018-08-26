@@ -78,39 +78,53 @@ Note that the last two sample cases would not appear in the Small dataset.
 In Sample Case #1, each of the two cups of yogurt will expire in one day. Today, Lucy can consume one of them, but she can only consume at most one cup each day, so she cannot consume both. Tomorrow, Lucy cannot consume the remaining cup of yogurt, because it will have expired.
 
 In Sample Case #3, Lucy can consume up to two cups each day, so she can consume all of the yogurt.*/
-void solve() {
+//void solve() {// brute force TLE
+//    int N = 0, K = 0;
+//    cin >> N >> K;
+//    vector<int> a; 
+//    for (int i = 0; i < N; i++) {
+//        int temp;
+//        cin >> temp; 
+//        a.push_back(temp);
+//    }
+//    sort(a.begin(), a.end());
+//  /*  cout << "a[N-1]=" << a[N - 1] << "  "; 
+//    cout << "After sort:   "; output(a);*/
+//    
+//    int num = 0;
+//    int maxday = a[N - 1];
+//    for (int i = 0; i < maxday; i++) {//error i < a[N - 1] 因为a[N-1]会动态变化
+//       // cout << "i=" << i << "  ";
+//        int k = 0;
+//        for (int j = 0; j < N ; j++) {
+//        //    cout << "j=" << j << endl;
+//            if ((a[j] > 0)&&(k<K)) {
+//                a[j] = 0;
+//                k++;
+//                num++;
+//            }
+//        }
+//       // cout << "  num=" << num<<"  "; output(a);
+//        for (int mm = 0; mm < N; mm++) { a[mm] -= 1; }
+//        
+//    }
+//    cout << num << endl;
+//}
+void solve() {// brute force TLE
     int N = 0, K = 0;
     cin >> N >> K;
-    vector<int> a; 
+    vector<int> a;
     for (int i = 0; i < N; i++) {
         int temp;
-        cin >> temp; 
+        cin >> temp;
         a.push_back(temp);
     }
     sort(a.begin(), a.end());
-  /*  cout << "a[N-1]=" << a[N - 1] << "  "; 
-    cout << "After sort:   "; output(a);*/
     
     int num = 0;
-    int maxday = a[N - 1];
-    for (int i = 0; i < maxday; i++) {//error i < a[N - 1] 因为a[N-1]会动态变化
-       // cout << "i=" << i << "  ";
-        int k = 0;
-        for (int j = 0; j < N ; j++) {
-        //    cout << "j=" << j << endl;
-            if ((a[j] > 0)&&(k<K)) {
-                a[j] = 0;
-                k++;
-                num++;
-            }
-        }
-       // cout << "  num=" << num<<"  "; output(a);
-        for (int mm = 0; mm < N; mm++) { a[mm] -= 1; }
-        
-    }
+    
     cout << num << endl;
 }
-
 int main() {
     freopen("C:\\Users\\yiye\\Downloads\\A-small-attempt0.in", "r", stdin);
     //freopen("C:\\Users\\yiye\\Downloads\\out.txt", "w", stdout);
@@ -127,4 +141,4 @@ int main() {
         //fclose(stdin);//关闭文件 
         //fclose(stdout);//关闭文件 
         return 0;
-    }
+    } 

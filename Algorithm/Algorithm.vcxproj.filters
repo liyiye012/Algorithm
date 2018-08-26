@@ -35,13 +35,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="Kickstart-Round-E-2018-ProblemA.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Kickstart-Round-E-2018-ProblemB.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Kickstart-Round-E-2018-ProblemC.cpp">
+    <ClCompile Include="Kickstart-Round-E-2018-ProblemA.Yogurt.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

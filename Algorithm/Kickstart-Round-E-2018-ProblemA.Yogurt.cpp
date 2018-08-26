@@ -5,7 +5,8 @@
 #include<vector>
 #include<cmath>
 #include<algorithm>
-#include<stack>
+#include<stack> 
+#include <functional> 
 #include<set>
 using namespace std;
 void output(vector<int> Arr) {
@@ -122,18 +123,30 @@ void solve() {// brute force TLE
     sort(a.begin(), a.end());
     
     int num = 0;
-    
+        int maxday = a[N - 1];
+        for (int i = 0; i < maxday; i++) {//error i < a[N - 1] 因为a[N-1]会动态变化
+            //cout << "i=" << i << "  ";    
+            int k = 0;
+            vector<int>::iterator nonezeroindex = lower_bound(a.begin(), a.end(), 1);
+            for (int j = nonezeroindex-a.begin(); j <nonezeroindex - a.begin()+ K && j<N ; j++) {
+                a[j] = 0;
+                num++;            
+            }
+            //cout << "  nonezeroindex="<<(nonezeroindex-a.begin())<<"  num=" << num<<"  "; output(a);
+            for (int mm = nonezeroindex - a.begin(); mm < N; mm++) { a[mm] -= 1; }
+            
+        }
     cout << num << endl;
 }
 int main() {
     freopen("C:\\Users\\yiye\\Downloads\\A-small-attempt0.in", "r", stdin);
     //freopen("C:\\Users\\yiye\\Downloads\\out.txt", "w", stdout);
-  
+    //freopen("out.txt", "r", stdin);
     int T;
     scanf("%d", &T);
     for (int i = 1; i <= T; i++) {
         printf("Case #%d: ", i);
-        if (i == 2 || i == 25 || i == 28 || i == 32 || i == 44 || i == 64 || i == 97) { cout << "0" << endl; continue; }
+        //if (i == 2 || i == 25 || i == 28 || i == 32 || i == 44 || i == 64 || i == 97) { cout << "0" << endl; continue; }
         solve();
 
     }

@@ -35,7 +35,13 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="59.SymmetricalBinaryTree(CodingInterview).cpp">
+    <ClCompile Include="Kickstart-Round-E-2018-ProblemA.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Kickstart-Round-E-2018-ProblemB.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Kickstart-Round-E-2018-ProblemC.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

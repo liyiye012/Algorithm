@@ -21,7 +21,6 @@
   <ItemGroup>
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="BinaryTree.cpp" />
-    <ClCompile Include="Kickstart-Round-E-2018-ProblemA.Yogurt.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="stdafx.cpp" />

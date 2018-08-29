@@ -16,16 +16,6 @@ void output(vector<int> Arr) {
     cout << endl;
 }
 
-inline bool isodd(int num) {
-    return num & 0x1 == 1;
-}
-
-void erase_one(std::multiset<long long> &s, long long x) {
-    auto it = s.find(x);
-    auto it1 = it;
-    it1++;
-    s.erase(it, it1);//左闭右开，删除的是it指向的元素
-}
 /*中国的奶茶很好吃。定制奶茶有很多二元(非此即彼)选项，比如“加冰”/“不加冰”、“加糖”/“不加糖”、“加泡泡”/“不加泡泡”、“加布丁”/“不加布丁”等等。顾客对奶茶的喜好可以用一个二进制字符串表示。例如，使用上述四种属性(按顺序排列)，字符串1100表示“加冰、加糖、不加气泡、不加布丁”。
 今天，沙克提要在一家提供二元选择的商店里为他的N个朋友每人买一杯奶茶。但是在收集了每个人的喜好后，Shakti发现订单变得太复杂了，所以Shakti决定为每个人购买相同类型的奶茶。莎克蒂知道，对于每一个朋友，对于每一个不满意的偏好，他们都会抱怨一次。例如，如果两个朋友对101和010类型有偏好，而Shakti选择了001类型，那么第一个朋友会抱怨一次，第二个朋友会抱怨两次，总共有三个投诉。
 此外，有M种不同的禁奶茶，店铺不会做，Shakti也无法选择任何一种禁奶茶。
@@ -88,8 +78,50 @@ Case #2: 2
 In Sample Case #1, there are 3 friends, and they want milk teas of types 1100, 1010, and 0000. If Shakti could choose type 1000, then each friend would complain once, for a total of 3 complaints. However, type 1000 is not available in the shop. So, given these constraints, an optimal solution is to choose type 1100. Then, his friends will complain 0, 2, and 2 times, respectively, for a total of 4 complaints.
 
 In Sample Case #2, Shakti's best option is to choose type 1110. Each friend will complain once, for a total of 2 complaints. Notice that different friends might have the same preferences. Also notice that the limits for both the Small and Large datasets guarantee that there is always at least one possible type of milk tea that is not forbidden.*/
+int   n, m, p, i, j, k, w[105][2], c[10005][2], N, ans;
+char a[105][105], b[105][105];
+struct node
+{
+    int s;
+    bool c[105];
+    bool operator<(const node& y)const
+    {
+        return s>y.s;
+    }
+}t;
+priority_queue<node> h;
 void solve() {
-     
+    scanf("%d%d%d", &n, &m, &p);
+    for (i = 0; i<n; i++)scanf("%s", a[i]);
+    for (i = 0; i<m; i++)scanf("%s", b[i]);
+    memset(c, 0, sizeof(c));
+    memset(w, 0, sizeof(w));
+    while (!h.empty())h.pop();
+    for (i = 0; i<p; i++)
+    {
+        for (j = 0; j<n; j++)w[i][a[j][i] ^ '1']++;
+        if (w[i][0]>w[i][1])for (swap(w[i][0], w[i][1]), j = 0; j<m; j++)b[j][i] ^= 1;
+    }
+    for (N = 1, i = 0; i<m; i++)for (j = 1, k = 0; k<p; j = c[j][b[i][k++] ^ '0'])if (!c[j][b[i][k] ^ '0'])c[j][b[i][k] ^ '0'] = ++N;
+    memset(t.c, 0, sizeof(t.c));
+    for (i = t.s = 0; i<p; i++)t.s += w[i][0];
+    h.push(t);
+    for (;;)
+    {
+        t = h.top();
+        h.pop();
+        for (i = 0, j = 1; i<p; j = c[j][t.c[i++]]);
+        if (!j)break;
+        for (i = 0; i<p; i++)if (!t.c[i])
+        {
+            t.c[i] = 1;
+            t.s += w[i][1] - w[i][0];
+            h.push(t);
+            t.c[i] = 0;
+            t.s -= w[i][1] - w[i][0];
+        }
+    }
+    printf("%d\n", t.s);
 }
 
 int main() {
@@ -98,8 +130,8 @@ int main() {
 
     int T;
     scanf("%d", &T);
-    for (int i = 1; i <= T; i++) {
-        printf("Case #%d: ", i);
+    for (int ii = 1; ii <= T; ii++) {
+        printf("Case #%d: ", ii);
         solve();
 
     }

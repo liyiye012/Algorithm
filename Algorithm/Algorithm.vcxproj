@@ -23,6 +23,7 @@
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="Queue.cpp" />
+    <ClCompile Include="sizeof含有虚函数的多继承的类.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="StringUtil.cpp" />
     <ClCompile Include="Tree.cpp" />

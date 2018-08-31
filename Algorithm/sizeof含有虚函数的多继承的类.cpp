@@ -22,12 +22,15 @@ class DerivedFromTwo : public Base1, public Base2
 {
     virtual void fun3() {}
 };
-
+class DerivedFromThree :public DerivedFromOne, public DerivedFromTwo {
+    virtual void fun4(){}
+};
 void main()
 {
     cout << "sizeof Base1 " << sizeof(Base1) << endl;
     cout << "sizeof Base1 " << sizeof(Base2) << endl;
     cout << "sizeof FromOne " << sizeof(DerivedFromOne) << endl;
     cout << "sizeof FromTwo " << sizeof(DerivedFromTwo) << endl;
+    cout << "sizeof FromThree " << sizeof(DerivedFromThree) << endl;
     getchar();
 }

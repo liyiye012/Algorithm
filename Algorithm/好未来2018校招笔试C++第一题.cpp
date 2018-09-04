@@ -5,10 +5,16 @@
 #include<unordered_map>
 #include<string>
 using namespace std;
-struct Point {
-    int x;
-    int y;
-}p1, p2, p3, p4;
+/*
+一个数字串可以被拆开成多个数字串，例如12345拆成12 3 45 或者123 45，给一个正整数类型的数字串n，求n拆开后的数能被3整除的最大数量m是多少（0也算3的倍数）
+举例：n=12345，拆成：
+（1）：12， 3，45，m=3
+(2):123,45,m=2
+输入描述：
+输入一个正整数类型的数字串n，长度小于100
+输出描述：
+输出一个数字表示n拆开后能被3整除最多的数量
+*/ 
 class Solution {
 public:
     void output(vector<int> nums) {
@@ -54,7 +60,8 @@ public:
         if (n % 3 == 0) return true;
         else return false;
     }
-    void solve() {
+    //我的解法 只能通过83%
+    void solve1() {
         vector<int> num;
         int temp;
         string str;
@@ -89,7 +96,34 @@ public:
         }
         cout << res;
     }
-  
+    /*
+    思路： 从前向后扫描，贪心： 遇到符合要求的继续下去。
+
+    m 记录前后几个数相加之和，最大不超过3 （111 222）, c1 c2 记录单位被 3 除余1 余2 的情况， m>0 && m%3==0 || c1 >1 && c2 >2 归位
+    某个数可以被 3 整除 continue
+    */
+    void solve() {
+        string str;
+        cin >> str;
+        int i, len = str.length(), m, number, ans = 0, c1, c2;
+        for (i = 0, m = 0, c1 = 0, c2 = 0; i < len; i++) {
+            number = str[i] - '0';
+            if (number % 3 == 0) {
+                ans++;
+                m = 0, c1 = 0, c2 = 0;
+                continue;
+            }
+            m += number;
+            if (number % 3 == 1) c1++;
+            else c2++; 
+            //判断能不能有一个组合
+            if ((m > 0 && m % 3 == 0) || (c1 > 0 && c2 > 0)) {
+                ans++;
+                m = 0, c1 = 0, c2 = 0;
+            }
+        }
+        cout << ans << endl;
+    }
 };
 int main() {
     Solution solution; 

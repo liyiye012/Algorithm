@@ -23,10 +23,10 @@
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="Queue.cpp" />
-    <ClCompile Include="sizeof含有虚函数的多继承的类.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="StringUtil.cpp" />
     <ClCompile Include="Tree.cpp" />
+    <ClCompile Include="好未来2018校招笔试C++第二题.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />

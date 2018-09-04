@@ -26,7 +26,7 @@
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="StringUtil.cpp" />
     <ClCompile Include="Tree.cpp" />
-    <ClCompile Include="好未来2018校招笔试C++第二题.cpp" />
+    <ClCompile Include="好未来2018校招笔试C++第二题加与或的关系.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />

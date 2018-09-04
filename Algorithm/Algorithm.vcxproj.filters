@@ -35,7 +35,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="好未来2018校招笔试C++第二题.cpp">
+    <ClCompile Include="好未来2018校招笔试C++第二题加与或的关系.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

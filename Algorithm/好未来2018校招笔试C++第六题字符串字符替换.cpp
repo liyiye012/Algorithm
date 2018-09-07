@@ -64,14 +64,45 @@ public:
         }
         cout << str;
     }
+
+    //参考答案
+    char* ReplaceSubStr(const char*str, const char* srcSubStr, const char* dstSubStr, char *out) {
+        int i;
+        const char * ptr_str;
+        char * ptr_out = out;
+        for (i = 0; i<strlen(str);) {
+            if ((ptr_str = strstr(str + i, srcSubStr)) == NULL) {
+                memcpy(ptr_out, str + i, strlen(str + i) + 1);
+                break;
+            }
+            else {
+                memcpy(ptr_out, str + i, ptr_str - (str + i));
+                ptr_out += ptr_str - (str + i);
+                memcpy(ptr_out, dstSubStr, strlen(dstSubStr));
+                ptr_out += strlen(dstSubStr);
+                i = ptr_str - str + strlen(srcSubStr);
+            }
+        }
+        return out;
+    }
 };
+/*
+使用C语言，实现字符串子串替换接口，可以假设替换前和替换后的字符串都有最大长度限制
+输入描述：
+字符串远传，被替换的子串，目标子串
+输出描述：
+替换后的新字符串
+
+备注：
+考察C语言基本功底
+*/
 int main() {
     string str, srcSubStr, dstSubStr;
     getline(cin,str);
     getline(cin,srcSubStr);
     getline(cin, dstSubStr);
     Solution sol;
-    sol.Replace(str, srcSubStr, dstSubStr);
+    //sol.Replace(str, srcSubStr, dstSubStr);
 
     return 0;
 }

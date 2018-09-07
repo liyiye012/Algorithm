@@ -51,18 +51,57 @@ public:
         }
     }
     void solve() {
-        int x, k;
-        cin >> x >> k;
-        int y = 1;
-        while (k!=0)
-        {
-            if ( ((x + y) ^ (x | y))==0) k--;
-            y++;
-        }
-        y--;
-        cout << y << endl;
+        long long x, k, ans, i, j, a, lenX, lenK, lenA;
+        int posX[160], posK[160], posA[160];
+        
+            memset(posX, 0, sizeof(posX));
+            cin >> x >> k;
+            i = 0, ans = 0;
+            while (x > 0) {
+                posX[i++] = x & 1;
+                x = x >> 1;
+            }
+            lenX = i;
+            i = 0;
+            while (k>0)
+            {
+                posK[i++] = k & 1;
+                k = k >> 1;
+            }
+            lenK = i;
+
+            for (i = 0, j = 0, a = 0; j < lenK; i++) {
+                if (posX[i] == 0) posA[a++] = posK[j++];
+                else posA[a++] = 0;
+            }
+            lenA = a;
+            for (i = lenA - 1; i >= 0; i--) {
+                ans = ans << 1;
+                ans = ans | posA[i];
+            }
+            cout << ans << endl;
     }
 };
+/*
+题目描述：
+一个等式x + y = x|y 给定一个正整数x, 满足等式的正整数y有很多歌，从第一个开始有小到大数y，
+给定一个正整数k，求满足要求的第 k 个 y
+
+输入描述：
+输入t表示有t组数据（t<100)
+每组数据输入x和k
+
+输出描述：
+输出y
+
+思路: 位运算。把 k 的所有位从低到高填充到 x 对应为0的位上。
+
+比如 x = 2 =0b10
+
+k = 1 = 0b1 , y = 0b01
+
+k = 2 = 0b10 , y = 0b100(加粗的1是因为要跳过x对应的1)
+*/
 int main() {
     Solution solution;
     int t = 0;

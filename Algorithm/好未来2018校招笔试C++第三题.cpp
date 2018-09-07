@@ -4,67 +4,59 @@
 #include<algorithm>
 #include<unordered_map>
 #include<string>
+#include<cstdio>
 using namespace std;
-struct Point {
-    int x;
-    int y;
-}p1, p2, p3, p4;
 class Solution {
 public:
-    void output(vector<int> nums) {
-        for (int i = 0; i < nums.size(); i++) {
-            cout << nums[i] << " ";
-        }
-        cout << endl;
-    }
-    void output(vector<vector<int>> dislikes) {
-        for (int i = 0; i<dislikes.size(); i++) {
-            cout << dislikes[i][0] << "," << dislikes[i][1] << endl;
-        }
-    }
-    bool possibleBipartition(int N, vector<vector<int>>& dislikes) {
-        if (N == 0 && dislikes.size() == 0) return true;
-        dislikes.erase(dislikes.begin());
-        output(dislikes);
-        return false;
-    }
-
-    void pushstr(string str, unordered_map<string, int> &mp) {
-        string s = "";
-        for (int i = 0; i<str.size(); i++) {
-            if (str[i] != ' ') s += str[i];
-            else if (str[i] == ' ') {
-                if (mp.find(s) != mp.end()) mp[s]++;
-                else if (mp.find(s) == mp.end()) mp[s] = 1;
-                s = "";
-            }
-        }
-        if (s.size() > 0) {
-            if (mp.find(s) != mp.end()) mp[s]++;
-            else if (mp.find(s) == mp.end()) mp[s] = 1;
-        }
-    }
-    void output(unordered_map<string, int> mpa) {
-        cout << "output:" << endl;
-        for (unordered_map<string, int>::iterator it = mpa.begin(); it != mpa.end(); it++) {
-            cout << (*it).first << "  " << (*it).second << endl;
-        }
-    }
-    void solve(vector<int> num,vector<string> & s, int index) {
-        if (num[index] == 1) s.push_back();
+ 
+    void solve(vector<int> num,vector<string> & s, int index) { 
     }
 };
+/*
+求给定位置下的数组的排列组合
+
+题目描述：
+对于固定数组{0，1，2，3，4，5，6，7，8，9}
+输入布尔数组{0，1，1，1，1，1，1，1，1，0}
+其中0表示对应下标书组元素可出现也可以不出现，1表示必须出现输出所有可能性组合，转换成字符串，并按照字符串升序排序
+012345678
+0123456789
+12345678
+123456789
+
+输入描述：
+位置出现的布尔值
+
+输出描述：
+打印所有组合
+
+思路：求多个数组的笛卡尔积
+*/
 int main() {
-    Solution solution;
-    vector<string> s;
-    vector<int> num;
-    string line;
-    getline(cin, line);
-    for (int i = 0; i < line.size(); i++) {
-        if (line[i] - '0' == 0 || line[i] - '0' == 1) {
-            num.push_back(line[i] - '0');
-        }
+    vector<string> arr;
+    int a[11];
+    for (int i = 0; i<10; i++)
+        scanf("%d", &a[i]);
+    for (int i = 0; i<(1 << 10); i++)
+    {
+        int f = 0;
+        for (int j = 0; j<10; j++)
+            if (!((i&(1 << j))) && a[j])
+            {
+                f = 1;
+                break;
+            }
+        if (f)
+            continue;
+        string str = "";
+        for (int j = 0; j<10; j++)
+            if (i&(1 << j))
+                str.push_back('0' + j);
+        arr.push_back(str);
     }
-    solution.solve(num, s, 0);
+    sort(arr.begin(), arr.end());
+    for (int i = 0; i<arr.size(); i++)
+        cout << arr[i] << endl;
+    return 0;
     return 0;
 }

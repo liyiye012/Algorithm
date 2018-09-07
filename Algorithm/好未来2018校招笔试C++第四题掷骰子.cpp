@@ -65,6 +65,28 @@ public:
         printf("%.2lf", e);
     }
 };
+/*
+有一个n面的骰子，掷每一面都是等概率的，其中有m个将里面，如果掷到奖励面则可以再掷一次骰子。玩家每掷一次
+都能获得掷到那一面的分数。求玩家可获得分数的期望
+输入描述：
+第一行输入两个数n,m分别表示骰子有n面，有m个面有奖励
+第二行输入n个数字用空格隔开，表示n个面的分数
+
+输出描述：
+输出期望，保留小数点后两位
+
+思路：
+n 面筛子，m面有奖，有奖继续掷筛子，没奖结束。
+
+输入给定 score 数组 s_array, len(s_array) == n， 求期望。
+
+数学题, e =
+
+ave_score = sum(s_array)/n
+(n-m)/n * avg_score (第一次就没奖)+
+m/n * (score + e) (第一次有奖，相当于从头开始)
+化简得到 e = sum(s_array)/n-m
+*/
 int main() {
     Solution solution;
     solution.solve();

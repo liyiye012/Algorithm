@@ -35,7 +35,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="好未来2018校招笔试C++第五题求正整数数组的最大升序和.cpp">
+    <ClCompile Include="template.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

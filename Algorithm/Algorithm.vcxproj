@@ -25,8 +25,8 @@
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="StringUtil.cpp" />
+    <ClCompile Include="template.cpp" />
     <ClCompile Include="Tree.cpp" />
-    <ClCompile Include="好未来2018校招笔试C++第五题求正整数数组的最大升序和.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />

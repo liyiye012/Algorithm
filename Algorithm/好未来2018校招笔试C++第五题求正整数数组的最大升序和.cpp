@@ -35,7 +35,14 @@ int[] data={5,1,3,4,9,7,6,8}
 输出描述：
 对最大升序和
 
-思路https://blog.csdn.net/sjf0115/article/details/8715586
+思路leetcode 300. Longest Increasing Subsequence
+我们维护一个一维dp数组，其中dp[i]表示以nums[i]为结尾的最长递增子串的数组和，
+对于每一个nums[i]，我们从第一个数再搜索到i，
+如果发现某个数小于nums[i]，我们更新dp[i]，
+更新方法为dp[i] = max(dp[i], dp[j] + nums[i])，
+即比较当前dp[i]的值和那个小于num[i]的数的dp值加1的大小，
+我们就这样不断的更新dp数组，到最后dp数组中最大的值就是我们要返回的LIS的长度
+
 */
 int arr[100];
 void output(vector<int> nums) {
@@ -46,19 +53,19 @@ void output(vector<int> nums) {
 }
 int maxSumIS(int arr[], int n)
 {
-    int i, j, max = 0;
+    int i, j, res = 0;
     vector<int> dp(n, 0);
     for (i = 0; i < n; i++)
         dp[i] = arr[i];
     for (i = 1; i < n; i++)
         for (j = 0; j < i; j++)
-            if (arr[i] > arr[j] && dp[i] < dp[j] + arr[i])
-                dp[i] = dp[j] + arr[i];
+            if (arr[i] > arr[j])
+                dp[i] = max(dp[i], dp[j] + arr[i]);
     for (i = 0; i < n; i++)
-        if (max < dp[i])
-            max = dp[i];
+        res = max(res, dp[i]);
+        
 
-    return max;
+    return res;
 }
 int main()
 {
@@ -67,6 +74,6 @@ int main()
         arr[i] = temp;
         i++;
     } 
-    printf("%d\n", maxSumIS(arr, i));
+    printf("%d\n", maxSumIS(arr, 100));
     return 0;
 }

@@ -35,7 +35,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="二元组序列可以产生的最长的链（对pair%28int, int%29做排序）.cpp">
+    <ClCompile Include="SelectionSort.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

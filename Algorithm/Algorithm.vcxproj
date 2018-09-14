@@ -23,10 +23,10 @@
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="Queue.cpp" />
+    <ClCompile Include="SelectionSort.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="StringUtil.cpp" />
     <ClCompile Include="Tree.cpp" />
-    <ClCompile Include="二元组序列可以产生的最长的链（对pair%28int, int%29做排序）.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />

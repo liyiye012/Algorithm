@@ -77,21 +77,25 @@ int main() {
     sort(A.begin(), A.end());
   //output(A);
     int paiming=1;
-    if(N==1) cout << paiming;
-    else {
-        for (int i = N - 1; i >= 0; i--) {
-            //cout << " before i=" << i << "   paiming=" << paiming << endl;
-            while ( (i>0) && (A[i] == A[i - 1] )) i--;
-           // cout << "Running1";
-            if (A[i] == num) { //cout << "Running2";
-                break; }
-            else if (A[i] > num) { //cout << "Running3";
-            paiming++; }
-           // cout << "end i=" << i << "   paiming=" << paiming << endl;
-        }
-        
-        cout << paiming;
-    }
+    //if(N==1) cout << paiming;
+    //else {
+    //    for (int i = N - 1; i >= 0; i--) {
+    //        //cout << " before i=" << i << "   paiming=" << paiming << endl;
+    //        while ( (i>0) && (A[i] == A[i - 1] )) i--;
+    //       // cout << "Running1";
+    //        if (A[i] == num) { //cout << "Running2";
+    //            break; }
+    //        else if (A[i] > num) { //cout << "Running3";
+    //        paiming++; }
+    //       // cout << "end i=" << i << "   paiming=" << paiming << endl;
+    //    }
+    //    
+    //    cout << paiming;
+    //}
 
+    for (int i = 0; i < A.size(); i++) {
+        if (A[i] > num) paiming++;
+    }
+    cout << paiming;
     return 0;
 }

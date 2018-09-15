@@ -27,7 +27,6 @@
     <ClCompile Include="StringUtil.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="幸运ID2018爱奇艺C++校招编程题.cpp" />
-    <ClCompile Include="局长的食物2018爱奇艺C++校招编程题.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />

@@ -35,7 +35,10 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="SelectionSort.cpp">
+    <ClCompile Include="局长的食物2018爱奇艺C++校招编程题.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="幸运ID2018爱奇艺C++校招编程题.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

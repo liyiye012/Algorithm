@@ -6,7 +6,7 @@ void swap(int *a, int *b) {
     *a = temp;
 }
 void SelectionSort(int *num, int len) {
-    for (int i = 0; i < len; i++) { ¡¢¡¢
+    for (int i = 0; i < len; i++) { 
         int index = i;
         for (int j = i+1; j < len; j++) {
             if (num[j] < num[index]) index = j;

@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="2018腾讯校招笔试题求图的度.cpp" />
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />
@@ -26,7 +27,6 @@
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="StringUtil.cpp" />
     <ClCompile Include="Tree.cpp" />
-    <ClCompile Include="幸运ID2018爱奇艺C++校招编程题.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />

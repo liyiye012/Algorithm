@@ -35,7 +35,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="幸运ID2018爱奇艺C++校招编程题.cpp">
+    <ClCompile Include="2018腾讯校招笔试题求图的度.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

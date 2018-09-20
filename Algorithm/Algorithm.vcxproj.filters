@@ -35,10 +35,10 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="排列小球-2018滴滴校招编程题.cpp">
+    <ClCompile Include="ponyai测试开发大小写转换.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="英文单词拼写纠错推荐-2018滴滴校招编程题.cpp">
+    <ClCompile Include="ponyai测试开发质数平方和.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

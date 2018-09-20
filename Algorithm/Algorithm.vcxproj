@@ -19,15 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="排列小球-2018滴滴校招编程题.cpp" />
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />
+    <ClCompile Include="ponyai测试开发质数平方和.cpp" />
+    <ClCompile Include="ponyai测试开发大小写转换.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="StringUtil.cpp" />
     <ClCompile Include="Tree.cpp" />
-    <ClCompile Include="英文单词拼写纠错推荐-2018滴滴校招编程题.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />

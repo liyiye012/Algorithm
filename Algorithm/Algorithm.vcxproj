@@ -21,9 +21,8 @@
   <ItemGroup>
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="BinaryTree.cpp" />
+    <ClCompile Include="Boss直聘直豆赠送.cpp" />
     <ClCompile Include="List.cpp" />
-    <ClCompile Include="ponyai测试开发质数平方和.cpp" />
-    <ClCompile Include="ponyai测试开发大小写转换.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="StringUtil.cpp" />

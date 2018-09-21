@@ -35,10 +35,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="ponyai测试开发大小写转换.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ponyai测试开发质数平方和.cpp">
+    <ClCompile Include="Boss直聘直豆赠送.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

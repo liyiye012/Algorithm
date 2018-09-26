@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="roadstar注册系统.cpp" />
+    <ClCompile Include="百度2018.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{000CDE04-ADB5-4BBA-912E-A4EB7370F685}</ProjectGuid>

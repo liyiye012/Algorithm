@@ -12,7 +12,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="roadstar注册系统.cpp">
+    <ClCompile Include="百度2018.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

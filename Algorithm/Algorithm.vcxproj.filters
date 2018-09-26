@@ -35,7 +35,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="roadstar点蜡烛.cpp">
+    <ClCompile Include="roadstar财产目录.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

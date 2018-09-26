@@ -23,7 +23,7 @@
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="Queue.cpp" />
-    <ClCompile Include="roadstar点蜡烛.cpp" />
+    <ClCompile Include="roadstar财产目录.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="StringUtil.cpp" />
     <ClCompile Include="Tree.cpp" />

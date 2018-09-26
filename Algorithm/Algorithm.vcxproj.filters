@@ -35,7 +35,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="Boss直聘直豆赠送.cpp">
+    <ClCompile Include="roadstar点蜡烛.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -12,7 +12,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="百度2018.cpp">
+    <ClCompile Include="网易2018C++字母卡片.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

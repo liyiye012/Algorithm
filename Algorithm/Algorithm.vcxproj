@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="今日头条2018校招合规表达式的数量.cpp" />
+    <ClCompile Include="Permutations.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{000CDE04-ADB5-4BBA-912E-A4EB7370F685}</ProjectGuid>

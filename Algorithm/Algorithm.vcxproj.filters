@@ -12,7 +12,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="美团点评路由器.cpp">
+    <ClCompile Include="小马智行分数运算.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

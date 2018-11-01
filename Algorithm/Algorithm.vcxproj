@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="小马智行分数运算.cpp" />
+    <ClCompile Include="stringstream.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{000CDE04-ADB5-4BBA-912E-A4EB7370F685}</ProjectGuid>
